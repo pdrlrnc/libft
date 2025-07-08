@@ -30,7 +30,7 @@ RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
 
 %.o: %.c
-			$(CC) $(CFLAGS) -I. -c $(<) -o $(@)
+			@$(CC) $(CFLAGS) -I. -c $(<) -o $(@)
 
 NAME			= libft.a
 
@@ -38,19 +38,22 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
+				@echo "Libft compiled!"
 
 bonus:			.bonus
 
 .bonus:			${BONUS_OBJS}
 				@ar -rcs ${NAME} ${BONUS_OBJS}
 				@touch .bonus
+				@echo "Libft BONUS copiled!"
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS)
+				@$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:			clean
-				$(RM) $(NAME)
-				$(RM) .bonus
+				@$(RM) $(NAME)
+				@$(RM) .bonus
+				@echo "Deep cleaned Libft!"
 
 re:				fclean $(NAME)
 
