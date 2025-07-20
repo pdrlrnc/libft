@@ -28,6 +28,7 @@ BONUS_OBJS		= $(BONUS:.c=.o)
 CC				= cc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
+DEBUG_FLAGS		= -g -O0
 
 %.o: %.c
 			@$(CC) $(CFLAGS) -I. -c $(<) -o $(@)
@@ -49,6 +50,9 @@ bonus:			.bonus
 
 clean:
 				@$(RM) $(OBJS) $(BONUS_OBJS)
+debug:			CFLAGS += $(DEBUG_FLAGS)
+debug:			fclean all
+				@echo "Libft compiled with debug flags!"
 
 fclean:			clean
 				@$(RM) $(NAME)
