@@ -29,6 +29,10 @@ Re-implemented standard functions like:
 - `lstnew`, `lstadd_front`, `lstsize`, `lstlast`, `lstadd_back`
 - `lstdelone`, `lstclear`, `lstiter`, `lstmap`
 
+### Bonus bonus - Functions I added because I needed them for other projects
+
+- `strdup_append`
+
 ## 🔧 How to Use
 
 ```bash
