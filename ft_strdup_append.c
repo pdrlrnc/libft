@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*strdup_append(char *append_front, char *str, char *append_back)
+char	*ft_strdup_append(char *append_front, char *str, char *append_back)
 {
 	int		len;
 	int		i;
@@ -45,5 +45,6 @@ char	*strdup_append(char *append_front, char *str, char *append_back)
 			*(result + i++) = *(append_back + j++);
 	}
 	*(result + i) = '\0';
+	free(str);
 	return (result);
 }
