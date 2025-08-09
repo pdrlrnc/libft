@@ -31,7 +31,7 @@ Re-implemented standard functions like:
 
 ### Bonus bonus - Functions I added because I needed them for other projects
 
-- `strdup_append`
+- `strdup_append`, `ft_shrink_split`, `ft_clean_split`, `ft_clean_split_error`
 
 ## 🔧 How to Use
 
