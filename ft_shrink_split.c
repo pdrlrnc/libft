@@ -52,9 +52,9 @@ static char	**cont(char **split, char **new_split, int first, int last)
 			while (++i <= last)
 			{
 				new_split[j] = ft_strdup_append(NULL, new_split[j], split[i]);
-				j++;
 				if (!new_split[j])
 					return (ft_clean_split_error(split, --j));
+				j++;
 			}
 		}
 		else
