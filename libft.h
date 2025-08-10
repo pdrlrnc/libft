@@ -71,7 +71,6 @@ int			ft_putnbr_base_fd(unsigned long long nbr, char *base, int fd);
 char		*ft_strdup_append(char *append_front, char *str, char *append_back);
 char		**ft_shrink_split(char **split, int first, int last);
 char		**ft_clean_split_error(char **split, int i);
-void		ft_clean_split(char **split);
 int			ft_splitlen(char **split);
 void		ft_splitfree(char **split);
 

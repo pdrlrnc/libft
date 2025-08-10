@@ -27,11 +27,11 @@ char	**ft_shrink_split(char **split, int first, int last)
 	i = 0;
 	while (split[i])
 		i++;
-	new_split = malloc((i - (last - first)) * sizeof(char *));
+	new_split = malloc((1 + i - (last - first)) * sizeof(char *));
 	if (!new_split)
 		return (split);
 	new_split = cont(split, new_split, first, last);
-	ft_clean_split(split);
+	ft_splitfree(split);
 	return (new_split);
 }
 
@@ -52,6 +52,7 @@ static char	**cont(char **split, char **new_split, int first, int last)
 			while (++i <= last)
 			{
 				new_split[j] = ft_strdup_append(NULL, new_split[j], split[i]);
+				j++;
 				if (!new_split[j])
 					return (ft_clean_split_error(split, --j));
 			}
@@ -63,5 +64,6 @@ static char	**cont(char **split, char **new_split, int first, int last)
 				return (ft_clean_split_error(split, --j));
 		}
 	}
+	new_split[j] = NULL;
 	return (new_split);
 }

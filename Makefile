@@ -17,7 +17,7 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 					ft_memmove.c ft_putnbr_fd.c  ft_strdup.c  ft_strlen.c  ft_strrchr.c \
 					ft_toupper.c ft_calloc.c  ft_isdigit.c ft_memchr.c  ft_memset.c  \
 					ft_putstr_fd.c  ft_strjoin.c ft_strmapi.c ft_striteri.c ft_putnbr_base_fd.c \
-					ft_strdup_append.c ft_shrink_split.c ft_clean_split.c ft_clean_split_error.c \
+					ft_strdup_append.c ft_shrink_split.c ft_clean_split_error.c \
 					ft_splitlen.c ft_splitfree.c
 OBJS			= $(SRCS:.c=.o)
 
