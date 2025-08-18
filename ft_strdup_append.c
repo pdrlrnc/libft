@@ -12,6 +12,9 @@
 
 #include "libft.h"
 
+/*prototypes*/
+static char	*ft_strdup_append_cont(char *ap_back, char *str, char *res, int i);
+
 char	*ft_strdup_append(char *append_front, char *str, char *append_back)
 {
 	int		len;
@@ -29,22 +32,29 @@ char	*ft_strdup_append(char *append_front, char *str, char *append_back)
 	if (!result)
 		return (NULL);
 	i = 0;
-	if(append_front)
+	if (append_front)
 	{
 		j = 0;
 		while (*(append_front + j))
 			*(result + i++) = *(append_front + j++);
 	}
+	return (ft_strdup_append_cont(append_back, result, str, i));
+}
+
+static char	*ft_strdup_append_cont(char *ap_back, char *str, char *res, int i)
+{
+	int	j;
+
 	j = 0;
 	while (*(str + j))
-		*(result + i++) = *(str + j++);
-	if (append_back)
+		*(res + i++) = *(str + j++);
+	if (ap_back)
 	{
 		j = 0;
-		while (*(append_back + j))
-			*(result + i++) = *(append_back + j++);
+		while (*(ap_back + j))
+			*(res + i++) = *(ap_back + j++);
 	}
-	*(result + i) = '\0';
+	*(res + i) = '\0';
 	free(str);
-	return (result);
+	return (res);
 }

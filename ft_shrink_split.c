@@ -14,6 +14,7 @@
 
 /**prototypes**/
 static char	**cont(char **split, char **new_split, int first, int last);
+static void	not_first(char **new_split, char **split, int *i, int *j);
 
 char	**ft_shrink_split(char **split, int first, int last)
 {
@@ -58,12 +59,15 @@ static char	**cont(char **split, char **new_split, int first, int last)
 			}
 		}
 		else
-		{
-			new_split[j++] = ft_strdup(split[i++]);
-			if (!new_split[j - 1])
-				return (ft_clean_split_error(split, --j));
-		}
+			not_first(new_split, split, &i, &j);
 	}
 	new_split[j] = NULL;
 	return (new_split);
+}
+
+static void	not_first(char **new_split, char **split, int *i, int *j)
+{
+	new_split[(*j)++] = ft_strdup(split[(*i)++]);
+	if (!new_split[*j - 1])
+		(ft_clean_split_error(split, --(*j)));
 }
