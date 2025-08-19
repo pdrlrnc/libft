@@ -38,7 +38,7 @@ char	*ft_strdup_append(char *append_front, char *str, char *append_back)
 		while (*(append_front + j))
 			*(result + i++) = *(append_front + j++);
 	}
-	return (ft_strdup_append_cont(append_back, result, str, i));
+	return (ft_strdup_append_cont(append_back, str, result, i));
 }
 
 static char	*ft_strdup_append_cont(char *ap_back, char *str, char *res, int i)
