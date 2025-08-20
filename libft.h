@@ -75,5 +75,6 @@ int			ft_splitlen(char **split);
 void		ft_splitfree(char **split);
 void		ft_splitfree_error(char **split, int i);
 int			ft_str_isdigit(char *str);
+int			ft_lst_contains_int(t_list *lst, int *content);
 
 #endif
