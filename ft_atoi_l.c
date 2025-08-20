@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoi_l.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pedde-so <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/07 12:19:17 by pedde-so          #+#    #+#             */
-/*   Updated: 2025/04/11 16:46:29 by pedde-so         ###   ########.fr       */
+/*   Created: 2025/08/20 15:22:48 by pedde-so          #+#    #+#             */
+/*   Updated: 2025/08/20 15:23:04 by pedde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi_l(char *nptr)
 {
-	int	result;
-	int	i;
-	int	minus;
+	unsigned long long	result;
+	int					i;
+	int					minus;
 
 	result = 0;
 	minus = 1;
