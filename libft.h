@@ -78,5 +78,6 @@ int		ft_str_isdigit(char *str);
 int		ft_lst_contains_int(t_list *lst, int *content);
 int		ft_isspace(char c);
 long	ft_atoi_l(char *nptr);
+int		ft_strcmp(char *str1, char *str2);
 
 #endif
