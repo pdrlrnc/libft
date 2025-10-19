@@ -20,6 +20,7 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c  ft_putchar_fd.c ft_split.c \
 					ft_strdup_append.c ft_shrink_split.c ft_clean_split_error.c \
 					ft_splitlen.c ft_splitfree.c ft_splitfree_error.c ft_str_isdigit.c \
 					ft_lst_contains_int.c ft_atoi_l.c ft_isspace.c ft_strcmp.c ft_realloc.c\
+					ft_strdup_n.c\
 					
 OBJS			= $(SRCS:.c=.o)
 

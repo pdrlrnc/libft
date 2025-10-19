@@ -67,6 +67,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 char	*ft_strdup(const char *s);
+char	*ft_strdup_n(const char *s, size_t n);
 int		ft_putnbr_base_fd(unsigned long long nbr, char *base, int fd);
 char	*ft_strdup_append(char *append_front, char *str, char *append_back);
 char	**ft_shrink_split(char **split, int first, int last);
