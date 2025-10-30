@@ -17,7 +17,7 @@ char	*ft_strdup_n(const char *s, size_t n)
 	size_t	i;
 	char	*result;
 
-	if (!s || n < 0)
+	if (!s)
 		return (NULL);
 	result = malloc(n + 1);
 	if (!result)
