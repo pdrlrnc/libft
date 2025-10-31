@@ -30,7 +30,7 @@ BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 
-CC				= cc
+CC				= cc -g 
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror -I.
 DEBUG_FLAGS		= -g -O0
