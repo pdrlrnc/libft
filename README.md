@@ -31,7 +31,7 @@ Re-implemented standard functions like:
 
 ### Bonus bonus - Functions I added because I needed them for other projects
 
-- `ft_strdup_append`, `ft_shrink_split`, `ft_clean_split_error`, `ft_splitlen`
+- `ft_strdup_append`, `ft_shrink_split`,  `ft_splitlen`
 - `ft_splitfree`, `ft_splitfree_error`, `ft_str_isdigit`, `ft_lst_contains_int`
 - `ft_atoi_l`, `ft_isspace`, `ft_strcmp`, `ft_realloc`, `ft_strdup_n`
 

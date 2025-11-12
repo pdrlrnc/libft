@@ -49,12 +49,12 @@ static char	**cont(char **split, char **new_split, int first, int last)
 		{
 			new_split[j] = ft_strdup(split[i]);
 			if (!new_split[j])
-				return (ft_clean_split_error(split, --j));
+				return (ft_splitfree_error(split, --j));
 			while (++i <= last)
 			{
 				new_split[j] = ft_strdup_append(NULL, new_split[j], split[i]);
 				if (!new_split[j])
-					return (ft_clean_split_error(split, --j));
+					return (ft_splitfree_error(split, --j));
 				j++;
 			}
 		}
@@ -69,5 +69,5 @@ static void	not_first(char **new_split, char **split, int *i, int *j)
 {
 	new_split[(*j)++] = ft_strdup(split[(*i)++]);
 	if (!new_split[*j - 1])
-		(ft_clean_split_error(split, --(*j)));
+		(ft_splitfree_error(split, --(*j)));
 }
