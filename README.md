@@ -34,6 +34,7 @@ Re-implemented standard functions like:
 - `ft_strdup_append`, `ft_shrink_split`,  `ft_splitlen`
 - `ft_splitfree`, `ft_splitfree_error`, `ft_str_isdigit`, `ft_lst_contains_int`
 - `ft_atoi_l`, `ft_isspace`, `ft_strcmp`, `ft_realloc`, `ft_strdup_n`
+- `ft_check_for_overflow`
 
 ## 🔧 How to Use
 

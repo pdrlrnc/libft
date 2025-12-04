@@ -80,5 +80,6 @@ int		ft_isspace(char c);
 long	ft_atoi_l(char *nptr);
 int		ft_strcmp(char *str1, char *str2);
 void	*ft_realloc(void *ptr, size_t old_size, size_t new_size);
+int		ft_check_for_overflow(char *nb);
 
 #endif
